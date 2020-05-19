@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Main3Activity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_done_black_24dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,26 +32,37 @@
             android:theme="?attr/actionBarTheme"
             app:title="Agregar Cancion" />
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="#FFFFFF"
+            app:srcCompat="@drawable/ic_queue_music_black_24dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/txtBuscar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="70"
                 android:ems="10"
-                android:hint="NOMBRE DE LA CANCION"
+                android:hint="Busca aqui"
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btn_buscar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="BUSCAR" />
+                android:background="@drawable/ic_search_black_24dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -50,52 +73,51 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="30"
-                    android:text="Nombre" />
+                    android:text="Nombre"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/cancion"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtNombreCancion"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="70"
+                    android:layout_marginLeft="10dp"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Name" />
+                    android:enabled="false"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Artista" />
+                    android:text="Artista"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/artista"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtArtista"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:text="Artista" />
+                    android:layout_marginLeft="20dp"
+                    android:enabled="false"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Agregar a la lista" />
 
     </LinearLayout>
 </RelativeLayout>
